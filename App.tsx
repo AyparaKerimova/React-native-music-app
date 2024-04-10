@@ -1,11 +1,24 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
+import { colors } from './assets/theme/colors';
+import { useFonts } from 'expo-font';
+import { HomeScreen } from './screens/HomeScreen';
+import { MusicScreen } from './screens/MusicScreen';
+import { Navbar } from './components/Navbar';
 
 export default function App() {
+  const [fontsLoaded, fontError] = useFonts({
+    'nunito-semibold': require('./assets/fonts/Nunito-SemiBold.ttf'),
+    'nunito-regular': require('./assets/fonts/Nunito-Regular.ttf'),
+    'segoeui-bold': require('./assets/fonts/Segoe UI Bold.ttf')
+  });
+  if (!fontsLoaded && !fontError) {
+    return null;
+  }
   return (
     <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
+    <MusicScreen/>
+      <StatusBar style="light" />
     </View>
   );
 }
@@ -13,8 +26,6 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: colors.darkBlue,
   },
 });
