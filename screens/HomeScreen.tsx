@@ -58,12 +58,6 @@ const styles = StyleSheet.create({
         borderRadius:10
 
     },
-    large:{
-
-    },
-    xLarge:{
-
-    },
     text:{
         fontFamily:'nunito-semibold',
         fontSize:22,

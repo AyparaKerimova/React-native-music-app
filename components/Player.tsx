@@ -7,6 +7,7 @@ import { SkipForward } from '../icons/SVG'
 import { Pause } from '../icons/SVG'
 import { Repeat } from '../icons/SVG'
 import { Play } from '../icons/SVG'
+import { GreenShuffle } from '../icons/SVG'
 
 export const Player = () => {
   const timePlayer = (time: number) => {
@@ -27,6 +28,11 @@ export const Player = () => {
   const handlePress = () => {
     setPlay(!play);
   };
+  const [shuffle, setShuffle] = useState<boolean>(false);
+
+  const handlePressShuffle = () => {
+    setShuffle(!shuffle);
+  };
 
   return (
     <View style={styles.container}>
@@ -37,7 +43,9 @@ export const Player = () => {
         <Text style={{ color: colors.white }}> {timePlayer(160)}</Text>
       </View>
       <View style={styles.customizePlayer}>
-        <Shuffle />
+        <TouchableOpacity onPress={handlePressShuffle}>
+        {shuffle ? <Shuffle /> : <GreenShuffle />}
+        </TouchableOpacity>
         <SkipBack />
         <View >
           <View style={styles.circle} />

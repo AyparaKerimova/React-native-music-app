@@ -28,17 +28,18 @@ export const Search = () => {
 export const Back= () => {
     return (
         <View style={styles.back}>
-          <Svg width={22} height={24} viewBox="0 0 22 24">
-            <Path d="M17.176 12H4.52002" stroke={colors.white} stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            <Path d="M10.848 19L4.52002 12L10.848 5" stroke={colors.white} stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </Svg>
+          <Svg width="22" height="24" viewBox="0 0 22 24" fill="none">
+<Path d="M17.176 12H4.52002" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<Path d="M10.848 19L4.52002 12L10.848 5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</Svg>
+
         </View>
       );
     };
 
 export const Like = () => {
     return (
-        <View style={styles.search}>
+        <View style={styles.like}>
           <Svg width="22" height="24" viewBox="0 0 22 24" fill="none" >
 <Path d="M18.8393 4.61C18.3776 4.099 17.8294 3.69365 17.226 3.41708C16.6226 3.14052 15.9759 2.99817 15.3228 2.99817C14.6697 2.99817 14.0229 3.14052 13.4195 3.41708C12.8162 3.69365 12.268 4.099 11.8062 4.61L10.848 5.67L9.88975 4.61C8.9571 3.57831 7.69216 2.99871 6.37319 2.99871C5.05423 2.99871 3.78928 3.57831 2.85663 4.61C1.92398 5.64169 1.40002 7.04097 1.40002 8.5C1.40002 9.95903 1.92398 11.3583 2.85663 12.39L3.81487 13.45L10.848 21.23L17.8811 13.45L18.8393 12.39C19.3013 11.8792 19.6677 11.2728 19.9177 10.6054C20.1678 9.9379 20.2964 9.22249 20.2964 8.5C20.2964 7.77751 20.1678 7.0621 19.9177 6.39464C19.6677 5.72719 19.3013 5.12076 18.8393 4.61Z" fill="#8E8E8E" stroke="#8E8E8E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 
@@ -48,6 +49,18 @@ export const Like = () => {
         </View>
       );
     };
+    export const NoneLike = () => {
+      return (
+          <View style={styles.like}>
+            <Svg width="22" height="24" viewBox="0 0 22 24" fill="none" >
+  <Path d="M18.8393 4.61C18.3776 4.099 17.8294 3.69365 17.226 3.41708C16.6226 3.14052 15.9759 2.99817 15.3228 2.99817C14.6697 2.99817 14.0229 3.14052 13.4195 3.41708C12.8162 3.69365 12.268 4.099 11.8062 4.61L10.848 5.67L9.88975 4.61C8.9571 3.57831 7.69216 2.99871 6.37319 2.99871C5.05423 2.99871 3.78928 3.57831 2.85663 4.61C1.92398 5.64169 1.40002 7.04097 1.40002 8.5C1.40002 9.95903 1.92398 11.3583 2.85663 12.39L3.81487 13.45L10.848 21.23L17.8811 13.45L18.8393 12.39C19.3013 11.8792 19.6677 11.2728 19.9177 10.6054C20.1678 9.9379 20.2964 9.22249 20.2964 8.5C20.2964 7.77751 20.1678 7.0621 19.9177 6.39464C19.6677 5.72719 19.3013 5.12076 18.8393 4.61Z" fill="none" stroke="#8E8E8E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  
+  
+  </Svg>
+          </View>
+        );
+      };
 
 export const Shuffle = () => {
       return (
@@ -58,6 +71,19 @@ export const Shuffle = () => {
 <Path d="M21.5153 16V21H16.3926" stroke="#F2F2F2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 <Path d="M15.3681 15L21.5153 21" stroke="#F2F2F2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 <Path d="M4.09814 4L9.22084 9" stroke="#F2F2F2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</Svg>
+        </View>
+      );
+    };
+    export const GreenShuffle = () => {
+      return (
+        <View style={styles.greenshuffle}>
+          <Svg width="25" height="24" viewBox="0 0 25 24" fill="none">
+<Path d="M16.3926 3H21.5153V8" stroke="green" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<Path d="M4.09814 20L21.5153 3" stroke="green" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<Path d="M21.5153 16V21H16.3926" stroke="green"stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<Path d="M15.3681 15L21.5153 21" stroke="green" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<Path d="M4.09814 4L9.22084 9" stroke="green" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 </Svg>
         </View>
       );
@@ -92,8 +118,8 @@ export const Pause= () => {
       return (
         <View style={styles.pause}>
       <Svg width="43" height="41" viewBox="0 0 43 41" fill="none" >
-<Path d="M17.9872 6.83331H10.9862V34.1666H17.9872V6.83331Z" stroke="#F2F2F2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<Path d="M31.9892 6.83331H24.9882V34.1666H31.9892V6.83331Z" stroke="#F2F2F2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<Path d="M17.9872 6.83331H10.9862V34.1666H17.9872V6.83331Z" stroke="#F2F2F2" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<Path d="M31.9892 6.83331H24.9882V34.1666H31.9892V6.83331Z" stroke="#F2F2F2" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
 </Svg>
 </View>
       );
@@ -116,10 +142,9 @@ export const Repeat= () => {
 export const Play= () => {
       return (
         <View style={styles.play}>
-       <Svg width={45} height={45} viewBox="0 0 45 45">
-            <Path d="M17.176 12H4.52002" stroke={colors.white} stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            <Path d="M10.848 19L4.52002 12L10.848 5" stroke={colors.white} stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </Svg>
+       <Svg viewBox="0 0 24 24" id="play">
+        <Path  stroke="#F2F2F2" d="M16,10.27,11,7.38A2,2,0,0,0,8,9.11v5.78a2,2,0,0,0,1,1.73,2,2,0,0,0,2,0l5-2.89a2,2,0,0,0,0-3.46ZM15,12l-5,2.89V9.11L15,12ZM12,2A10,10,0,1,0,22,12,10,10,0,0,0,12,2Zm0,18a8,8,0,1,1,8-8A8,8,0,0,1,12,20Z"/>
+        </Svg>
 
 </View>
       );
@@ -135,7 +160,7 @@ export const Play= () => {
         height:18
       },
       back:{
-        color:colors.white
+        color:colors.white,
       },
       like:{
 
@@ -152,15 +177,20 @@ export const Play= () => {
       pause:{
         position:'absolute',
         alignSelf:'center',
-        marginTop:-55
+        marginTop:-55,
       },
       repeat:{
         
       },
       play:{
+        width:40,
+        height:40,
         position:'absolute',
         alignSelf:'center',
         marginTop:-55
+      },
+      greenshuffle:{
+        color:'green'
       }
     })
 

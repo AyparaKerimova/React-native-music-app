@@ -1,10 +1,11 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, View } from 'react-native';
+import { ScrollView, StyleSheet, View } from 'react-native';
 import { colors } from './assets/theme/colors';
 import { useFonts } from 'expo-font';
 import { HomeScreen } from './screens/HomeScreen';
 import { MusicScreen } from './screens/MusicScreen';
 import { Navbar } from './components/Navbar';
+import { LikeScreen } from './screens/LikeScreen';
 
 export default function App() {
   const [fontsLoaded, fontError] = useFonts({
@@ -17,7 +18,9 @@ export default function App() {
   }
   return (
     <View style={styles.container}>
-    <MusicScreen/>
+      <ScrollView>
+    <LikeScreen/>
+    </ScrollView>
       <StatusBar style="light" />
     </View>
   );
